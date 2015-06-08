@@ -930,12 +930,12 @@ int main(int argc, char *argv[])
         PHYS_OFF = S5L8940_PHYS_OFF;
         phys_addr_remap = 0xbfe00000;
     } else {
-        printf("Bravely assuming you're on an 8940-class device (unrecognized). You are on your own.\n");
+        printf("Bravely assuming you're on an 8950-class device (unrecognized). You are on your own.\n");
         /*
          * All others have the high ram base. 
          */
         PHYS_OFF = S5L8940_PHYS_OFF;
-        phys_addr_remap = 0x9fe00000;
+        phys_addr_remap = 0xbfe00000;
     }
 
     /*
