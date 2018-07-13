@@ -11,7 +11,7 @@ LDFLAGS	=	-miphoneos-version-min=6.0 -framework IOKit -framework CoreFoundation
 all:	multi_kloader kloader ibsspatch img3maker
 
 kloader:	kloader.c
-	SDKROOT=$(SDKROOT) $(CC) $(CFLAGS) $(LDFLAGS) -o $@ $<
+	SDKROOT=$(SDKROOT) $(CC) $(LDFLAGS) -o $@ $<
 	$(LDID) $(SFLAGS) $@
 
 multi_kloader:	multi_kloader.c
