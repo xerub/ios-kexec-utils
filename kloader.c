@@ -877,10 +877,9 @@ static void generate_ttb_entries(void)
 }
 
 #define DMPSIZE     0xd00000
-extern char shellcode_begin[], shellcode_end[];
-extern uint32_t larm_init_tramp;
-extern uint32_t flush_dcache, invalidate_icache;
-extern uint32_t kern_base, kern_tramp_phys;
+uint32_t larm_init_tramp;
+uint32_t flush_dcache, invalidate_icache;
+uint32_t kern_base, kern_tramp_phys;
 
 int main(int argc, char *argv[])
 {
